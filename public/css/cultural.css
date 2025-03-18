@@ -1,0 +1,434 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: #e1eae8;
+}
+
+h3 {
+    font-size: 1.3em !important; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-weight: bold !important;
+    color: rgb(37, 80, 180) !important;
+}
+
+h4 {
+    font-size: 1.3em !important; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-weight: bold !important;
+    color: rgb(27, 194, 127) !important;
+}
+
+h2 {
+    font-size: 1.3em !important; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-weight: bold !important;
+    color: black !important;
+}
+
+
+
+/*--------------------------------*/
+
+
+
+/*Estilos para section video*/
+
+.video-section {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 4rem);
+    height: calc(100vh - 4rem);
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #f7f9f6; /* Fondo negro intencional para contenedor */
+}
+
+.video-container {
+    max-width: calc(100vw - 4rem);
+    max-height: calc(100vh - 4rem);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+    
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: transparent; /* Asegurar que el video no herede fondos */
+    object-fit: cover; /* Cambiar de contain a cover para llenar el espacio */
+}
+
+/* Opcional: para relación de aspecto específica */
+@media (min-aspect-ratio: 16/9) {
+    .video-container {
+        width: calc((100vh - 8rem) * 16 / 9);
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-container {
+        height: calc((100vw - 8rem) * 9 / 16);
+    }
+}
+
+/*---------------------------------------------------------------------*/
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .video-section {
+        height: 300px; /* Altura más apropiada para móviles */
+        border-radius: 10px; /* Radio menor para pantallas pequeñas */
+    }
+}
+
+
+
+ /* Nueva sección de rutas */
+ .rutas-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #08305d 50%, var(--cream) 50%);
+}
+
+.rutas-section {
+    padding: 5rem 5%;
+    background: #d1e7f3;
+}
+
+.ruta-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.ruta-card:hover {
+    transform: translateY(-5px);
+}
+
+.map-container {
+    height: 400px;
+    background: #d3d3dc;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+/* Sección Descripción */
+.section-info {
+    padding: 5rem 10%;
+    background: rgb(223, 237, 235);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #16c25e;
+    margin-bottom: 1rem;
+}
+
+.decorative-line {
+    width: 100px;
+    height: 3px;
+    background: #35dce8;
+    margin: 0 auto;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card i {
+    font-size: 3rem;
+    color: #1bc25e;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover i {
+    color: #1aa456;
+    transform: rotate(360deg);
+}
+
+
+
+/* Sección Actividades */
+.activities-section {
+    padding: 5rem 5%;
+    background: #d6cdd2;
+}
+
+.activities-section h2 {
+    text-align: center;
+    color: #02011b;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.activity-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.activity-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    position: relative;
+    background: white;
+}
+
+.icon-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.icon-group i {
+    font-size: 1.5rem;
+    color: #1ac14f;
+    transition: all 0.3s ease;
+}
+
+.icon-group i:hover {
+    color: #16c263;
+    transform: scale(1.2);
+}
+
+/* Sección Recomendaciones */
+.recommendations {
+    padding: 5rem 10%;
+    background: linear-gradient(45deg, #ece7e7, #e6dddd);
+}
+
+.recommendation-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.recommendation-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    margin: -3px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, #25d276, #353a37);
+}
+
+.tips-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.tips-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff9f2;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #121313;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-left: 4px solid #123be2;
+    background: #fff9f2;
+    max-width: 600px;
+}
+
+blockquote span {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    color: #2751eb;
+}
+
+/* Animaciones personalizadas */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-card {
+        flex: 0 0 250px;
+    }
+    
+    .recommendation-box {
+        padding: 2rem;
+    }
+    
+    .tips-list {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------*/
+
+/*section de contacto*/
+
+@media (max-width: 768px) {
+    .venta-card {
+        padding: 1.5rem !important;
+        margin: 0 1rem !important;
+        width: 90% !important;
+    }
+    
+    .contacto-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .contacto-item {
+        padding: 1rem !important;
+    }
+    
+    .contacto-item h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .contacto-item p {
+        font-size: 0.9rem !important;
+    }
+    
+    .contacto-item i {
+        font-size: 2rem !important;
+    }
+    
+    /* Métodos de pago responsive */
+    .metodos-pago {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+    }
+    
+    .metodos-pago span {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .venta-card {
+        border-radius: 15px !important;
+        padding: 1rem !important;
+    }
+    
+    .contacto-item {
+        text-align: left !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .contacto-item i {
+        margin-bottom: 0.5rem !important;
+    }
+     
+    a[href^="tel:"], 
+    a[href*="whatsapp"] {
+        font-size: 1rem !important;
+        padding: 0.8rem !important;
+        display: block !important;
+    }
+}
+

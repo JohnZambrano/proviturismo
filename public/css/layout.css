@@ -1,0 +1,421 @@
+
+:root {
+    --color-green-primary: #21c961;
+    --color-green-light: #24cb64;
+    --color-green-dark: #30be70;
+    --color-white: #ffffff;
+    --color-gray-light: #f5f5f5;
+}
+
+link[rel="icon"] {
+    border-radius: 50%;
+}
+
+
+/* Contenedor para centrar el logo */
+/* Contenedor para centrar el logo y aplicar el fondo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 6, 11, 0.838); /* Corregido formato de color RGBA */
+    border-radius: 50%; /* Hacemos el contenedor completamente redondo */
+    padding: 5px; /* Aumentamos un poco el padding para mejor visualización */
+    width: 220px; /* Tamaño base */
+    height: 220px; /* Mismo valor que width para mantener forma circular */
+    margin: auto;
+    overflow: hidden; /* Aseguramos que la imagen no sobresalga del contenedor */
+    /* Hacemos el contenedor responsivo */
+    max-width: 100%;
+    transition: transform 0.3s ease; /* Opcional: efecto hover suave */
+   
+}
+
+/* Para hacer la imagen responsiva y circular */
+.logo-container img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 50%; /* Redondeo adicional para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    /* Hacemos la imagen escalable */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        width: 100px;
+        height: 100px;
+        padding: 3px;
+    }
+}
+
+/* Opcional: Efecto hover */
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el logo */
+.footer-logo {
+    max-width: 100%; /* Asegura que no sea más grande que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Borde redondeado más pequeño para la imagen */
+    transition: transform 0.5s ease; /* Transición suave para efectos */
+}
+
+/* Efecto al pasar el cursor sobre el logo */
+.footer-logo:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 3rem; /* Tamaño de fuente grande para pantallas grandes */
+    text-align: center; /* Centrado del título */
+    color: #1a1616; /* Color oscuro para el texto */
+    margin-bottom: 5px; /* Margen inferior para separación */
+}
+
+/* Estilo para el párrafo */
+p {
+    font-size: 1.5rem; /* Tamaño de fuente moderado para pantallas grandes */
+    color: rgb(241, 247, 247); /* Color negro del texto */
+    text-align: center; /* Centrado del párrafo */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Reducir el tamaño del título en pantallas más pequeñas */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Reducir el tamaño del párrafo en pantallas más pequeñas */
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Diseño responsivo para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    /* Hacer que el título sea aún más pequeño en pantallas muy pequeñas */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Ajustar el tamaño del párrafo para móviles */
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Header y Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(42,92,130,0.9), rgba(42,92,130,0.7)), 
+    url('https://picsum.photos/1920/600') center/cover;
+    
+    display: flex;
+    padding: 0 10%;
+    animation: fadeIn 1s ease-out;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(244, 248, 250);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Contenedor del contenido */
+.hero-content {
+    text-align: center;
+    color: rgb(239, 245, 246);
+    position: relative;
+    animation: fade-in 1.5s ease-in-out; /* Animación de entrada */
+}
+
+
+/* ---------------------------------------------------------- */
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #fcffff;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-blu-dark);
+    outline: none;
+}
+
+.submit-btn {
+    background: var(--color-green-primary);
+    color: rgb(255, 255, 255);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+
+/*Reseñas y estilos para las estrellitas*/
+
+.title {
+    font-weight: bold; /* Negrita */
+    font-size: 28px; /* Tamaño grande */
+    color: #010c17; /* Azul oscuro para destacar */
+    text-align: center; /* Centrar el texto */
+    text-transform: uppercase; /* Convertir en mayúsculas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    padding: 10px; /* Espaciado */
+    background-color: #f0f8ff; /* Azul claro de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
+.form-label {
+    font-weight: bold; /* Hace que el texto sea negrita */
+    font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
+    color: #333; /* Color oscuro para mayor contraste */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas (opcional) */
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; /* Para que la estrella más alta esté a la derecha */
+    justify-content: center;
+    gap: 5px;
+}
+
+.star-rating input {
+    display: none; /* Oculta los botones de radio */
+}
+
+.star-rating label {
+    font-size: 50px; /* Tamaño de las estrellas */
+    color: rgb(250, 253, 253); /* Color de las estrellas */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Cambia el color al pasar el mouse */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+/* Cambia el color cuando se selecciona una estrella */
+.star-rating input:checked ~ label {
+    color: gold;
+}
+/*Fin estilos estrellitas*/
+
+
+
+.submit-btn:hover {
+    background: var(--color-blu-dark);
+}/* Fondo general */
+body {
+    background-color: #e7ebf2; /* Fondo claro */
+    color: #0b0101; /* Texto oscuro */
+    font-family: 'Inter', sans-serif; /* Fuente moderna */
+}
+
+
+
+.form-control:focus {
+    background-color: #ffffff; /* Fondo blanco */
+    border-color: #19be87; /* Verde */
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25); /* Resplandor */
+}
+
+/* Botones */
+button.btn-primary {
+    background-color: #1471c8; /* Verde suave */
+    border-color: #1471c8;
+    color: #100f0f; /* Texto blanco */
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #1471c8;/* Verde más oscuro */
+    border-color: #059669;
+    transform: scale(1.03); /* Efecto ligero de zoom */
+}
+
+/* Botones de acción secundaria */
+button.btn-secondary {
+    background-color: #020b18; /* Oscuro */
+    border-color: #030f20;
+    color: #ffffff; /* Texto blanco */
+    font-weight: 500;
+}
+
+.btn-edit {
+    background-color: #ffc107; /* Yellow */
+    border-color: #ffc107;
+    color: #212529; /* Dark text color */
+    }
+
+    .btn-delete {
+    background-color: #dc3545; /* Red */
+    border-color: #dc3545;
+    color: #ffffff; /* Light text color */
+    }
+
+    .btn-edit:hover,
+    .btn-delete:hover {
+    opacity: 0.8; /* Slightly less opaque on hover */
+    }
+
+    .btn-edit i,
+    .btn-delete i {
+    margin-right: 0.5rem; /* Add some space between icon and text */
+    }
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: rgb(23, 215, 97);
+    padding: 60px 20px 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+
+/*Iconos para redes sociales*/
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: var(--color-green-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(235, 239, 242);
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    background: var(--color-white-light);
+}
+
+
+
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    color: var(--color-white-light);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #f2f8f8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-green-light);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+

@@ -1,0 +1,136 @@
+/* Estilos generales */
+.menu-section {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+    color: #343a40;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-out; /* Animación de desvanecimiento y bajada */
+}
+
+/* Estilos de columnas */
+.menu-column {
+    padding: 20px;
+    transition: transform 0.3s ease; /* Transición para efecto hover */
+}
+
+.menu-column:hover {
+    transform: translateY(-5px); /* Elevar la columna al pasar el ratón */
+}
+
+.menu-category {
+    color: #007bff;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out; /* Animación de desvanecimiento */
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+    color: #495057;
+    animation: fadeInRight 1s ease-out; /* Animación de desvanecimiento y desplazamiento desde la derecha */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*Menu----------------------------------------------------------------------*/
+
+
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 0 15px;
+    }
+    
+    .menu-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .menu-row {
+        flex-direction: column;
+        margin: 0 -15px;
+    }
+    
+    .menu-column {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        margin-bottom: 2rem;
+    }
+    
+    .menu-category {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .menu-list {
+        padding-left: 1.5rem;
+    }
+    
+    .menu-item {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu-item::after {
+        content: attr(data-price);
+        color: #666;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-title {
+        font-size: 1.6rem;
+    }
+    
+    .menu-category {
+        font-size: 1.3rem;
+    }
+    
+    .menu-item {
+        font-size: 0.9rem;
+    }
+}

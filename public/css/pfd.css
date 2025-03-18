@@ -1,0 +1,117 @@
+/* Variables CSS para fácil personalización */
+:root {
+    --card-radius: 1rem;
+    --card-padding: 2rem;
+    --hover-elevation: 0 12px 24px rgba(0, 0, 0, 0.1);
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.downloads-section {
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.download-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--card-radius);
+    transition: all 0.3s var(--transition-timing);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.download-card .card-body {
+    padding: var(--card-padding);
+    min-height: 320px;
+}
+
+.icon-wrapper {
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgba(78, 115, 223, 0.1);
+    transition: transform 0.3s var(--transition-timing);
+}
+
+.download-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--hover-elevation);
+}
+
+.download-card:hover .icon-wrapper {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .download-card .card-body {
+        min-height: 280px;
+        padding: 1.5rem;
+    }
+
+    .icon-wrapper {
+        padding: 0.75rem;
+    }
+
+    .fa-3x {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .downloads-section {
+        padding: 2rem 0;
+    }
+
+    .download-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .download-card .card-body {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .download-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .icon-wrapper {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.download-card:focus-within {
+    box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.5);
+}
+

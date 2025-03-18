@@ -1,0 +1,30 @@
+
+.info-box {
+    transition: transform 0.3s ease;
+}
+.info-box:hover {
+    transform: translateY(-5px);
+}
+.card {
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.main-footer {
+    background: #343a40;
+    color: #ffffff;
+    border-top: 1px solid #4f5962;
+}
+.main-footer a {
+    color: #3c8dbc;
+}
+.progress {
+    height: 5px;
+    margin-top: 5px;
+}
+.counter {
+    font-size: 24px;
+    font-weight: bold;
+}
+

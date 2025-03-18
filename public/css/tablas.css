@@ -1,0 +1,179 @@
+
+/* Estilos generales para la tabla */
+    .center-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .table {
+        border-radius: 10px;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+
+    .table th, .table td {
+        padding: 12px 15px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table-light {
+        background-color: #f7f7f7;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 123, 255, 0.1); /* Color suave al pasar el mouse */
+        cursor: pointer;
+    }
+
+    /* Animación para filas de la tabla */
+    .table tbody tr {
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Estilo para botones */
+    .btn-warning {
+        background-color: #f39c12;
+        border-color: #e67e22;
+        transition: all 0.3s ease;
+    }
+
+    .btn-warning:hover {
+        background-color: #e67e22;
+        border-color: #f39c12;
+        transform: scale(1.05);
+    }
+
+    .btn-edit {
+        background-color: #3498db;
+        border-color: #2980b9;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn-edit:hover {
+        background-color: #2980b9;
+        border-color: #3498db;
+        transform: scale(1.05);
+    }
+
+    .btn-delete {
+        background-color: #e74c3c;
+        border-color: #c0392b;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn-delete:hover {
+        background-color: #c0392b;
+        border-color: #e74c3c;
+        transform: scale(1.05);
+    }
+
+    /* Estilo para el modal de confirmación */
+    .modal-content {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+        background-color: #f39c12;
+        color: white;
+    }
+
+    .modal-footer button {
+        transition: all 0.3s ease;
+    }
+
+    .modal-footer .btn-secondary:hover {
+        background-color: #e67e22;
+    }
+
+    .modal-footer .btn-danger:hover {
+        background-color: #c0392b;
+    }
+
+    /* Efectos de transición en las acciones de la tabla */
+    .badge {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .badge:hover {
+        transform: scale(1.1);
+        background-color: #2980b9;
+    }
+
+    /* Estilo para la paginación */
+    .pagination {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+
+   
+    /* Asegura que todos los botones tengan el mismo tamaño */
+    .btn-group .btn {
+        min-width: 120px;  /* Establece un tamaño mínimo para los botones */
+        padding: 8px 15px; /* Ajusta el padding para que los botones tengan el mismo tamaño */
+        text-align: center; /* Centra el texto dentro del botón */
+        transition: all 0.3s ease; /* Transición suave en los efectos hover */
+    }
+
+    /* Botones con efectos de hover */
+    .btn-primary:hover, .btn-danger:hover, .btn-warning:hover {
+        transform: scale(1.05); /* Escala suave al pasar el mouse */
+    }
+
+    /* Botones dentro del grupo */
+    .btn-group .btn {
+        margin: 0 5px; /* Margen horizontal entre botones */
+    }
+
+    /* Estilo adicional para el botón de "Nuevo" */
+    .btn-warning {
+        background-color: #f39c12; /* Color de fondo para el botón "Nuevo" */
+        border-color: #e67e22;
+    }
+
+    /* Efecto hover en el botón "Nuevo" */
+    .btn-warning:hover {
+        background-color: #e67e22;
+        border-color: #f39c12;
+    }
+    
+    /* Estilos personalizados para las tablas */
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9; /* Color de fondo para filas impares */
+    }
+
+    /* Estilo para las paginaciones */
+    .pagination {
+        justify-content: center;
+    }
+
+
+/*Estilo de tablas para la descripcion*/
+
+#descripcion {
+    width: 100%;
+    font-family: sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+  }

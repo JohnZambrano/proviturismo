@@ -1,0 +1,151 @@
+/* Animación única para el contenedor */
+@keyframes unique-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo único para el contenedor principal */
+#unique-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    opacity: 0;
+    animation: unique-fade-in 0.5s ease-in-out forwards;
+}
+
+/* Estilo único para la tarjeta del título */
+#unique-title-card {
+    background-color: #1a1a2e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: unique-fade-in 0.5s ease-in-out 0.2s forwards;
+}
+
+/* Estilo único para la tarjeta de información */
+#unique-info-card {
+    background-color: #1a1a2e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0;
+    animation: unique-fade-in 0.5s ease-in-out 0.4s forwards;
+}
+
+/* Transición suave para el botón */
+#unique-info-card a {
+    background-color: #28b463;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#unique-info-card a:hover {
+    background-color: #1e8449; /* Cambia el color al pasar el cursor */
+}
+
+
+
+/*Estilos para los botones del crud de cards */
+
+.actions {
+    display: flex;
+    gap: 1rem; /* Ajusta el espacio entre botones */
+    align-items: center;
+  }
+  
+  .btn {
+    font-size: 1rem; /* Tamaño de fuente normal */
+    padding: 0.6rem 1.2rem; /* Ajusta el padding para el tamaño del botón */
+    border-radius: 0.3rem; /* Bordes ligeramente redondeados */
+    transition: all 0.2s ease-in-out; /* Transiciones suaves */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff; /* Fondo azul al pasar el mouse */
+    color: #fff; /* Texto blanco al pasar el mouse */
+    border-radius: 0.3rem; /* Bordes ligeramente redondeados */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 0.3rem; /* Bordes ligeramente redondeados */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9; /* Azul más oscuro al pasar el mouse */
+    border-radius: 0.3rem; /* Bordes ligeramente redondeados */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Fondo rojo */
+    color: #fff; /* Texto blanco */
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c12a36; /* Rojo más oscuro al pasar el mouse */
+  }
+  
+  .like-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el icono y el contador */
+  }
+  
+  .like-btn i {
+    font-size: 1.2rem; /* Tamaño del icono de corazón */
+  }
+
+  .btn {
+    /* ... estilos anteriores ... */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 0.3rem; /* Bordes ligeramente redondeados */
+  }
+  
+  .btn:hover {
+    /* ... estilos anteriores ... */
+    transform: translateY(-2px); /* Ligeramente elevado al pasar el mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el mouse */
+  }
+
+  .btn-primary {
+    background-image: linear-gradient(to right, #007bff, #0069d9); /* Gradiente azul */
+    border-radius: 0.3rem; /* Ajusta este valor para controlar el radio de los bordes */
+  }
+  
+  .btn-primary:hover {
+    background-image: linear-gradient(to right, #0069d9, #0056b3); /* Gradiente azul más oscuro al pasar el mouse */
+  }
+  
+  .btn-danger {
+    background-image: linear-gradient(to right, #dc3545, #c12a36); /* Gradiente rojo */
+  }
+  
+  .btn-danger:hover {
+    background-image: linear-gradient(to right, #c12a36, #ad222c); /* Gradiente rojo más oscuro al pasar el mouse */
+  }
+  
+  .like-btn:hover {
+    transform: scale(1.1); /* Escala ligeramente al pasar el mouse */
+  }
+

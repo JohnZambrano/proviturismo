@@ -1,0 +1,337 @@
+
+:root {
+    --color-green-primary:#21c961;
+    --color-green-light: #1dc36d;
+    --color-green-dark:#21c961;
+    --color-white:  #f5f5f5;
+    --color-gray-light: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
+/* Contenedor para centrar el logo */
+/* Contenedor para centrar el logo y aplicar el fondo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 6, 11, 0.838); /* Corregido formato de color RGBA */
+    border-radius: 50%; /* Hacemos el contenedor completamente redondo */
+    padding: 5px; /* Aumentamos un poco el padding para mejor visualización */
+    width: 220px; /* Tamaño base */
+    height: 220px; /* Mismo valor que width para mantener forma circular */
+    margin: auto;
+    overflow: hidden; /* Aseguramos que la imagen no sobresalga del contenedor */
+    /* Hacemos el contenedor responsivo */
+    max-width: 100%;
+    transition: transform 0.3s ease; /* Opcional: efecto hover suave */
+   
+}
+
+/* Para hacer la imagen responsiva y circular */
+.logo-container img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 50%; /* Redondeo adicional para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    /* Hacemos la imagen escalable */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        width: 100px;
+        height: 100px;
+        padding: 3px;
+    }
+}
+
+/* Opcional: Efecto hover */
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+/*-------------------------------------------------------------------------*/
+
+/* Header y Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(42,92,130,0.9), rgba(42,92,130,0.7)), 
+    url('https://picsum.photos/1920/600') center/cover;
+    
+    display: flex;
+    padding: 0 10%;
+    animation: fadeIn 1s ease-out;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(244, 248, 250);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Contenedor del contenido */
+.hero-content {
+    text-align: center;
+    color: rgb(239, 245, 246);
+    position: relative;
+    animation: fade-in 1.5s ease-in-out; /* Animación de entrada */
+}
+
+
+
+/*------------------------------------------------------------------------*/
+
+/* Historia Cards Section */
+.history-section {
+    padding: 80px 20px;
+    background-color: var(--color-gray-light);
+}
+
+.history-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.history-card {
+    background: var(--color-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.history-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.history-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.history-card-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.history-card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-green-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -50px auto 20px;
+    color: white;
+    font-size: 1.5rem;
+    border: 4px solid white;
+}
+
+/* Formulario de Contacto */
+.contact-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--color-green-dark), var(--color-green-primary));
+    color: rgb(14, 1, 1);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info {
+    padding: 30px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-info-item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #17202a;
+}
+
+.contact-form {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #444849;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-green-primary);
+    outline: none;
+}
+.submit-btn {
+    background:#2ecc71 ;
+    color: rgb(9, 10, 10);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--color-blu-dark);
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 60px 20px 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: var(--color-green-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    background: var(--color-green-dark);
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    color: var(--color-green-light);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-green-light);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
