@@ -66,10 +66,7 @@ Route::get('/servicios/hoteles', [HotelController::class, 'hoteles'])->name('ser
 Route::get('/servicios/restaurantes', [RestauranteController::class, 'restaurantes'])->name('servicios.restaurantes');
 Route::get('/servicios/transporte', [TransporteController::class, 'transporte'])->name('servicios.transporte');
 Route::get('/lugar_turistico/index',[LugarTuristicoController::class, 'index'])->name('lugar_turistico.index');
-Route::get('/evento_cultural/index',[ActividadCulturalController::class, 'index'])->name('/evento_cultural/index');
-
-Route::resource('resenas/index', ResenasController::class)->only(['index', 'show']); // Only index and show
-Route::resource('noticias/index', NoticiasController::class)->only(['index', 'show']);// Only index and show
+Route::get('/evento_cultural/index',[ActividadCulturalController::class, 'index'])->name('evento_cultural.index');
 
 
 /* Rutas para mostrar vistas de transporte*/

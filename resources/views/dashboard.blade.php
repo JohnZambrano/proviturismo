@@ -227,5 +227,7 @@
         <i class="fas fa-heart text-danger"></i> por el equipo de desarrollo.
         <br><br>
         <strong>Copyright</strong><p class="mb-0">&copy; {{ date('Y') }} ProviTurismo. Todos los derechos reservados.</p>
+        <br>
+        <a href="https://www.digitalocean.com/?refcode=87c26049ef2e&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a>
     </footer>
 @stop

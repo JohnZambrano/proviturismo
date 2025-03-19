@@ -139,7 +139,10 @@
     <main class="flex-grow container py-5">
             <br><br>  
 
+            
+
             <div class="welcome-section">
+                
                 <h1 class="text-center display-3 fw-bold text-dark mb-1 welcome-title">
                     Bienvenido a ProviTurismo
                 </h1>
@@ -147,6 +150,7 @@
                 <p class="text-center fw-bold text-muted fs-5 welcome-text">
                 🏨Conozca nuevos destinos, reconecta con la naturaleza🌟.
                 </p>
+                
             </div>
             <br><br> 
 
@@ -474,6 +478,6 @@
 
             <a href="https://www.digitalocean.com/?refcode=87c26049ef2e&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a>
         </div>
-            
+       
     </footer>
 </html>
