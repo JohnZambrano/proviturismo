@@ -18,10 +18,6 @@
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.0.4"
-    },
-    "overrides": {
-      "@rollup/rollup-linux-x64-gnu": "4.12.0"
     }
-
     
 }
