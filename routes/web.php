@@ -132,9 +132,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::resource('hoteles', ServicioHotelController::class)->parameters([
-    'hoteles' => 'hotel' // Singular correcto
-]);
+
+
 
 //Rutas para el formulario de about
 
@@ -147,7 +146,9 @@ Route::post('/about/index', [ContactFormController::class, 'submitForm'])->name(
 Route::group(['middleware' =>['auth']], function(){
     Route::resource('roles',RolController::class);
     Route::resource('usuarios',UsuarioController::class);
-    Route::resource('hoteles',ServicioHotelController::class); 
+    Route::resource('hoteles', ServicioHotelController::class)->parameters([
+        'hoteles' => 'hotel' // Singular correcto
+    ]);
     Route::resource('restaurantes',ServicioRestauranteController::class);
     Route::resource('transportes',ServicioTransporteController::class);
     Route::resource('resenas',ResenasController::class);
