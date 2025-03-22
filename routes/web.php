@@ -30,6 +30,8 @@ use App\Http\Controllers\ContactFormController;
 use Illuminate\Support\Facades\Route;
 
 
+
+
 /* Ruta para la vista principal welcome */
 
 Route::get('/', function () {
